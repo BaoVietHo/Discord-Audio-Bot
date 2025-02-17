@@ -3,10 +3,10 @@ from discord.ext import commands, tasks
 import asyncio
 import time
 
-TOKEN = "YOUR_BOT_TOKEN"
+TOKEN = "MTM0MDkzMzQ4NTU2NDUyNjU5Mg.G3sWwP.5S0C8zzf8DTIx0efgSTmvF-H1e619vwZ0hjBIQ"
 GUILD_ID = 1338043993103142912  # Your server ID
 AFK_CHANNEL_ID = 1338046891577049099  # AFK channel ID
-AUDIO_FILE = "your_audio.mp3"
+AUDIO_FILE = "you digging in me Sound effect.mp3"
 AFK_TIME_LIMIT = 5  # 15 minutes in seconds
 AUDIO_PLAY_TIME = 5   # 5 minutes in seconds
 
