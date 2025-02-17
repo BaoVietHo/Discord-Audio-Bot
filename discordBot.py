@@ -14,20 +14,19 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 if not TOKEN:
     raise ValueError("No token provided. Please set the DISCORD_TOKEN environment variable.")
 
-bot = commands.Bot(command_prefix='!')
+# Set up intents to allow the bot to track voice states and members
+intents = discord.Intents.default()
+intents.voice_states = True
+intents.members = True  # Required to track user activity
+
+# Create the bot with the necessary intents
+bot = commands.Bot(command_prefix='!', intents=intents)
 
 GUILD_ID = 1338043993103142912  # Your server ID
 AFK_CHANNEL_ID = 1338046891577049099  # AFK channel ID
 AUDIO_FILE = "you digging in me Sound effect.mp3"
 AFK_TIME_LIMIT = 5 * 60  # 5 minutes in seconds (set to 5 minutes for testing)
 AUDIO_PLAY_TIME = 5 * 60  # 5 minutes in seconds
-
-# Enable intents to track members and voice state changes
-intents = discord.Intents.default()
-intents.voice_states = True
-intents.members = True  # Required to track user activity
-
-bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Store the last active timestamp for users
 user_activity = {}
