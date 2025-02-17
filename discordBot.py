@@ -7,8 +7,8 @@ TOKEN = "MTM0MDkzMzQ4NTU2NDUyNjU5Mg.G3sWwP.5S0C8zzf8DTIx0efgSTmvF-H1e619vwZ0hjBI
 GUILD_ID = 1338043993103142912  # Your server ID
 AFK_CHANNEL_ID = 1338046891577049099  # AFK channel ID
 AUDIO_FILE = "you digging in me Sound effect.mp3"
-AFK_TIME_LIMIT = 5  # 15 minutes in seconds
-AUDIO_PLAY_TIME = 5   # 5 minutes in seconds
+AFK_TIME_LIMIT = 5 * 60  # 15 minutes in seconds
+AUDIO_PLAY_TIME = 5 * 60  # 5 minutes in seconds
 
 intents = discord.Intents.default()
 intents.voice_states = True
