@@ -3,7 +3,7 @@ from discord.ext import commands, tasks
 import asyncio
 import time
 
-TOKEN = "MTM0MDkzMzQ4NTU2NDUyNjU5Mg.G3sWwP.5S0C8zzf8DTIx0efgSTmvF-H1e619vwZ0hjBIQ"
+TOKEN = "YOUR_BOT_TOKEN"
 GUILD_ID = 1338043993103142912  # Your server ID
 AFK_CHANNEL_ID = 1338046891577049099  # AFK channel ID
 AUDIO_FILE = "your_audio.mp3"
@@ -60,5 +60,11 @@ async def move_to_afk(member):
         if member.voice and member.voice.channel == afk_channel:
             await member.move_to(None)  # Forcefully disconnect the user
             print(f"{member.name} has been disconnected after AFK.")
+
+@bot.command()
+async def shutdown(ctx):
+    """Shuts down the bot."""
+    await ctx.send("Shutting down bot...")
+    await bot.close()  # This will stop the bot
 
 bot.run(TOKEN)
