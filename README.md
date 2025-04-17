@@ -1,5 +1,5 @@
 # This is my Discord AFK bot 
-This bot is designed to mess with your friends that leave ther PCs on by moving them to a designated AFK channel after being AFK for 15 minutes and playing a pre-determined sound effect.
+This bot is designed to disconect your friends that leave ther PCs on by moving them to a designated AFK channel after being AFK for 15 minutes and playing a pre-determined sound effect.
 
 ## Features
 - AFK Detection: The bot checks voice channels for users who have been inactive for 15 minutes.
